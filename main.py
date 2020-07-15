@@ -1,7 +1,7 @@
 from selenium import webdriver
 import typer
 import requests
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 import time
 import io
 import os
