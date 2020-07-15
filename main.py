@@ -127,6 +127,7 @@ def search_and_download(keyword: str =typer.Option(...) , chromedriver : str=typ
     t1 = time.time()
     total_time = t1 - t0
     print("Total time taken: " + str(total_time) + " Seconds")
+    wd.close()
 
 
 
