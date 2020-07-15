@@ -18,7 +18,7 @@ options = Options()
 options.add_argument("--headless")
 # options.add_argument("--window-size=1920x1080")
 
-wd = webdriver.Chrome('./chromedriver.exe',options=options)
+wd = webdriver.Chrome('./chromedriver',options=options)
 # wd.get('https://google.com')
 #
 # search_box = wd.find_element_by_css_selector('input.gLFyf')
@@ -107,7 +107,7 @@ def persist_image(folder_path:str,url:str):
 
 
 @app.command()
-def search_and_download(keyword: str =typer.Option(...) , chromedriver : str=typer.Option('./chromedriver.exe'), target_path:str=typer.Option('./images'), number_images:int=typer.Option(5)):
+def search_and_download(keyword: str =typer.Option(...) , chromedriver : str=typer.Option('./chromedriver'), target_path:str=typer.Option('./images'), number_images:int=typer.Option(5)):
     target_folder = os.path.join(target_path, '_'.join(keyword.lower().split(' ')))
 
     if not os.path.exists(target_folder):
